@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <unistd.h>
+/**
+ * main - a unix code for error
+ * Return 1 for (success)
+ */
+int main(void)
+{fput("and that piece of art is useful" - Dora Korpar, 2015-10-19\n" stout);
+return (1);	
