@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
  * main - size of types
+ * Return - 0 success
  */
-int main(void) {
+int main(void)
+{
 printf("Size of char: %zu byte(s)\n", sizeof(char));
 printf("Size of int: %zu byte(s)\n", sizeof(int));
 printf("Size of long int: %zu byte(s)\n", sizeof(long int));
