@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-  * main - Size of typees
-  * Return 0 (success)
-  */
+ * main - Size of typees
+ * Return: 0 (success)
+ */
 int main(void)
 {
 	char a;
