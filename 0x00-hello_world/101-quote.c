@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * main - a unix code for error
- * Return 1 for (success)
+ * Return: 1 for (success)
  */
 int main(void)
 {
