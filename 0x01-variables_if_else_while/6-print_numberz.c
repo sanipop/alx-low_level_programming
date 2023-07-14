@@ -7,8 +7,7 @@
  */
 int main(void)
 {
-char num1 = '0';
-char num2 = num1 + 1;
+int num1 = 0;
 
 while (num1 <= '9')
 {
