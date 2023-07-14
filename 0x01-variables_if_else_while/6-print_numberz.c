@@ -3,22 +3,21 @@
 /**
  * main - Entry point of the program
  *
- * Return: Always 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	putchar('0');
-	putchar('1');
-	putchar('2');
-	putchar('3');
-	putchar('4');
-	putchar('5');
-	putchar('6');
-	putchar('7');
-	putchar('8');
-	putchar('9');
-	putchar('\n');
+char num1 = '0';
+char num2 = num1 + 1;
 
-	return (0);
+while (num1 <= '9')
+{
+putchar(num1);
+num1++;
+}
+
+putchar('\n');
+
+return (0);
 }
 
