@@ -9,9 +9,9 @@ int main(void)
 {
 int num1 = 0;
 
-while (num1 <= '9')
+while (num1 <= 9)
 {
-putchar(num1);
+putchar(num1 + '0');
 num1++;
 }
 
