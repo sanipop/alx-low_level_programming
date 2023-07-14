@@ -7,26 +7,26 @@
  */
 int main(void)
 {
-    char lowercase;
-    char uppercase;
+char lowercase;
+char uppercase;
 
-    lowercase = 'a';
-    uppercase = 'A';
+lowercase = 'a';
+uppercase = 'A';
 
-    while (lowercase <= 'z')
-    {
-        putchar(lowercase);
-        lowercase++;
-    }
+while (lowercase <= 'z')
+{
+putchar(lowercase);
+lowercase++;
+}
 
-    while (uppercase <= 'Z')
-    {
-        putchar(uppercase);
-        uppercase++;
-    }
+while (uppercase <= 'Z')
+{
+putchar(uppercase);
+uppercase++;
+}
 
-    putchar('\n');
+putchar('\n');
 
-    return (0);
+return (0);
 }
 
