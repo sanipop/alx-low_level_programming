@@ -16,7 +16,6 @@ int main(void)
 
     for (num = 1; num < 98; num++)
     {
-        // Special case to print the second Fibonacci number
         if (num == 1)
             printf(", %lu", fib2);
         else
