@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ * _islower - Checks for lowercase character
  * print_alphabet_x10 - Make alphabet x10 times
  * return: void
  */
