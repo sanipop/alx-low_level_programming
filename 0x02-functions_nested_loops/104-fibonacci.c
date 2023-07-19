@@ -9,25 +9,28 @@
  */
 int main(void)
 {
-int num;
-unsigned long int fib1 = 1, fib2 = 2, next;
+    int num;
+    unsigned long int fib1 = 1, fib2 = 2, next;
 
-printf("%lu, %lu", fib1, fib2);
-for (num = 2; num < 98; num++)
-{
-next = fib1 + fib2;
+    printf("%lu", fib1);
 
-if (num % 10 == 9)
-printf(",\n\t%lu", next);
-else
-printf(",\t%lu", next);
+    for (num = 1; num < 98; num++)
+    {
+        // Special case to print the second Fibonacci number
+        if (num == 1)
+            printf(", %lu", fib2);
+        else
+        {
+            next = fib1 + fib2;
+            printf(", %lu", next);
 
-fib1 = fib2;
-fib2 = next;
-}
+            fib1 = fib2;
+            fib2 = next;
+        }
+    }
 
-printf("\n");
+    printf("\n");
 
-return 0;
+    return 0;
 }
 
