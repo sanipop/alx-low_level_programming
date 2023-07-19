@@ -25,6 +25,6 @@ fib2 = next;
 
 printf("\n");
 
-return 0;
+return (0);
 }
 
