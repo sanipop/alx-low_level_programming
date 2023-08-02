@@ -1,6 +1,6 @@
 #include "main.h"
 
-int actual_prime(int n, int b);
+int recussion(int n, int b);
 
 /**
  * is_prime_number - 1 or 0 value of a prime number
