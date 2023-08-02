@@ -4,7 +4,7 @@ int check_pal(char *s, int b, int x);
 int _strlen_recursion(char *s);
 
 /**
- * is_palindrome - palindrome checking function 
+ * is_palindrome - palindrome checking function
  * @s: input variable
  *
  * Return: Binary output
