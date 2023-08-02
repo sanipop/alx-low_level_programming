@@ -45,4 +45,3 @@ int check_pal(char *s, int b, int x)
 		return (1);
 	return (check_pal(s, b + 1, x - 1));
 }
-
