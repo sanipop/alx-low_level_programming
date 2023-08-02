@@ -22,7 +22,7 @@ int is_prime_number(int n)
  *
  * Return: Binary output of prime number
  */
-recussion(int n, int b)
+int recussion(int n, int b)
 {
 	if (b == 1)
 		return (1);
