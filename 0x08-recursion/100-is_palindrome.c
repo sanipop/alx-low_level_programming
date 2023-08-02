@@ -43,6 +43,6 @@ int check_pal(char *s, int b, int x)
 		return (0);
 	if (b >= len)
 		return (1);
-	return (check_pal(s, b + 1, len - 1));
+	return (check_pal(s, b + 1, x - 1));
 }
 
