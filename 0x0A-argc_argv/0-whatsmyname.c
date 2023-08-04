@@ -3,7 +3,7 @@
 
 /**
  * main - outputs  program name
- * @argc: count input argument 
+ * @argc: count input argument
  * @argv: input array
  *
  * Return: Always 0 (Success)
