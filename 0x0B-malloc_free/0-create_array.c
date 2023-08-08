@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * create_array - ASSIGN c to Array of length 
+ * create_array - ASSIGN c to Array of length
  * @lenght: array LENGHT
  * @c: Input character
  * Description: Assign c to array of lenght
