@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _strdup - make duplicate mem location 
+ * _strdup - make duplicate mem location
  * @str: pointer
  * Return: 0
  */
