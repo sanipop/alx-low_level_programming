@@ -2,29 +2,30 @@
 #include "main.h"
 
 /**
- * custom_array_range - Creates an array of integers within a given range
- * @minimum: Minimum value in the range
- * @maximum: Maximum value in the range (also determines the number of elements)
+ * *array_range - function that makes an array 
+ * @min: strat
+ * @max: end
  *
- * Return: Pointer to the newly created array, or NULL if allocation fails
+ * Return: new mem add
  */
-int *custom_array_range(int minimum, int maximum)
+int *array_range(int min, int max)
 {
-    int *result_array;
-    int index, array_size;
+	int *pointer;
+	int x, range ;
 
-    if (minimum > maximum)
-        return (NULL);
+	if (min > max)
+		return (NULL);
 
-    array_size = maximum - minimum + 1;
-    result_array = malloc(sizeof(int) * array_size);
+	range = max - min + 1;
 
-    if (result_array == NULL)
-        return (NULL);
+	pointer = malloc(sizeof(int) * size);
 
-    for (index = 0; minimum <= maximum; index++)
-        result_array[index] = minimum++;
+	if (pointer == NULL)
+		return (NULL);
 
-    return (result_array);
+	for (x = 0; min <= max; x++)
+		pointer[x] = min++;
+
+	return (pointer);
 }
 
