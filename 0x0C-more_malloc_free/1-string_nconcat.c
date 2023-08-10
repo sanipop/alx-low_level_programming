@@ -2,43 +2,45 @@
 #include "main.h"
 
 /**
- * _custom_memset - Fills memory with a specified value
- * @memory_area: Memory area to be filled
- * @value: Value to be copied
- * @length: Number of times to copy the value
+ * string_nconcat - Concatenates n bytes of one string to another string.
+ * @s1: The destination string.
+ * @s2: The source string.
+ * @n: The number of bytes from s2 to concatenate.
  *
- * Return: Pointer to the memory area 'memory_area'
+ * Return: A pointer to the concatenated string, or NULL on failure.
  */
-char *_custom_memset(char *memory_area, char value, unsigned int length)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    unsigned int i;
-    for (i = 0; i < length; i++)
+    char *s;
+    unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
+
+    while (s1 && s1[len1])
+        len1++;
+    while (s2 && s2[len2])
+        len2++;
+
+    if (n < len2)
+        s = malloc(sizeof(char) * (len1 + n + 1));
+    else
+        s = malloc(sizeof(char) * (len1 + len2 + 1));
+
+    if (!s)
+        return (NULL);
+
+    while (i < len1)
     {
-        memory_area[i] = value;
+        s[i] = s1[i];
+        i++;
     }
-    return (memory_area);
-}
 
-/**
- * _custom_calloc - Allocates memory for an array and initializes it to zero
- * @num_elements: Number of elements in the array
- * @element_size: Size of each element
- *
- * Return: Pointer to the allocated memory, or NULL if allocation fails
- */
-void *_custom_calloc(unsigned int num_elements, unsigned int element_size)
-{
-    char *pointer;
+    while (n < len2 && i < (len1 + n))
+        s[i++] = s2[j++];
 
-    if (num_elements == 0 || element_size == 0)
-        return (NULL);
+    while (n >= len2 && i < (len1 + len2))
+        s[i++] = s2[j++];
 
-    pointer = malloc(element_size * num_elements);
+    s[i] = '\0';
 
-    if (pointer == NULL)
-        return (NULL);
-
-    _custom_memset(pointer, 0, num_elements * element_size);
-    return (pointer);
+    return (s);
 }
 
