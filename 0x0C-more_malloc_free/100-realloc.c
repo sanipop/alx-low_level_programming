@@ -2,17 +2,17 @@
 #include "main.h"
 
 /**
- * *_realloc - FUNCTIONS to reallocate memory 
- * @ptr: old mem address 
- * @old_size: old size of pointer
- * @new_size: new size of variable 
+ * *_realloc - change memory array block
+ * @ptr: old array
+ * @old_size: prev size
+ * @new_size: new size
  *
- * Return: change pointer to new address 
+ * Return: new array
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *fist_pointer;
-	char *second_pointer;
+	char *pointer1;
+	char *old_pointer;
 	unsigned int x;
 
 	if (new_size == old_size)
@@ -27,25 +27,25 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (!ptr)
 		return (malloc(new_size));
 
-	fist_pointer = malloc(new_size);
-	if (!fist_pointer)
+	pointer1 = malloc(new_size);
+	if (!pointer1)
 		return (NULL);
 
-	second_pointer = ptr;
+	old_pointer = ptr;
 
 	if (new_size < old_size)
 	{
 		for (x = 0; x < new_size; x++)
-			fist_pointer[x] = second_pointer[i];
+			pointer1[x] = old_pointer[x];
 	}
 
 	if (new_size > old_size)
 	{
 		for (x = 0; x < old_size; x++)
-			fist_pointer[x] = second_pointer[x];
+			pointer1[x] = old_pointer[x];
 	}
 
 	free(ptr);
-	return (fist_pointer);
+	return (pointer1);
 }
 

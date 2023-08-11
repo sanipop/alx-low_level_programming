@@ -8,7 +8,7 @@
  * is_digit - verify if digit
  * @s: input
  *
- * Return: binary output 
+ * Return: binary output
  */
 int is_digit(char *s)
 {

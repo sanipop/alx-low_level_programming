@@ -2,43 +2,46 @@
 #include "main.h"
 
 /**
- * custom_memset - Fills memory with a constant byte
- * @memory_area: Memory area to be filled
- * @byte_value: Byte value to copy
- * @length: Number of times to copy byte_value
+ * *_memset - FILLS out a source
+ * @s: destination 
+ * @b: char to copy
+ * @n: size
  *
- * Return: Pointer to the memory area 'memory_area'
+ * Return: pointer output
  */
-char *custom_memset(char *memory_area, char byte_value, unsigned int length)
+char *_memset(char *s, char b, unsigned int n)
 {
-    unsigned int i;
-    for (i = 0; i < length; i++)
-    {
-        memory_area[i] = byte_value;
-    }
-    return memory_area;
+	unsigned int x;
+
+	for (x = 0; x < n; x++)
+	{
+		s[x] = b;
+	}
+
+	return (s);
 }
 
 /**
- * custom_calloc - Allocates memory for an array and initializes it to zero
- * @num_elements: Number of elements in the array
- * @element_size: Size of each element
+ * *_calloc - array variable builder
+ * @nmemb: size of array
+ * @size: individual size
  *
- * Return: Pointer to the allocated memory, or NULL if allocation fails
+ * Return: pointer to allocated memory
  */
-void *custom_calloc(unsigned int num_elements, unsigned int element_size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    char *allocated_ptr;
+	char *pointer;
 
-    if (num_elements == 0 || element_size == 0)
-        return NULL;
+	if (nmemb == 0 || size == 0)
+		return (NULL);
 
-    allocated_ptr = malloc(element_size * num_elements);
+	pointer = malloc(size * nmemb);
 
-    if (allocated_ptr == NULL)
-        return NULL;
+	if (pointer == NULL)
+		return (NULL);
 
-    custom_memset(allocated_ptr, 0, num_elements * element_size);
-    return allocated_ptr;
+	_memset(pointer, 0, nmemb * size);
+
+	return (pointer);
 }
 
