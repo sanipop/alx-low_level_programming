@@ -3,7 +3,7 @@
 
 /**
  * *_memset - FILLS out a source
- * @s: destination 
+ * @s: destination
  * @b: char to copy
  * @n: size
  *

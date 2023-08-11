@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * *array_range - function that makes an array 
+ * *array_range - function that makes an array
  * @min: strat
  * @max: end
  *
@@ -11,7 +11,7 @@
 int *array_range(int min, int max)
 {
 	int *pointer;
-	int x, range ;
+	int x, range;
 
 	if (min > max)
 		return (NULL);

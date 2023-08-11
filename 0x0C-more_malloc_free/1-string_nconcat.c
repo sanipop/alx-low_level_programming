@@ -4,7 +4,7 @@
 /**
  * *string_nconcat - concatenates n bytes of a string to another string
  * @s1: string source
- * @s2: string destination 
+ * @s2: string destination
  * @n: count of string to move
  *
  * Return: output array
