@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * free_dog - CLEAR allocated memory 
+ * free_dog - CLEAR allocated memory
  * @d: data type to clear
  */
 void free_dog(dog_t *d)

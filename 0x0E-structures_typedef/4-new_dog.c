@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include "dog.h"
 /**
  * _strlen - function to determine  length of a string
  * @s: input variable 
