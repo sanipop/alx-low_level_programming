@@ -2,7 +2,7 @@
 #include "dog.h"
 /**
  * _strlen - function to determine  length of a string
- * @s: input variable 
+ * @s: input variable
  *
  * Return: Output the input size
  */
