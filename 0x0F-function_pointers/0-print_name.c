@@ -1,8 +1,8 @@
 #include "function_pointers.h"
-	#include <stdio.h>
+#include <stdio.h>
 	/**
 	 * print_name - function using pointer to print
-	 * @name: input character 
+	 * @name: input character
 	 * @f: func. to poin4
 	 * Return: nothing
 	 **/
