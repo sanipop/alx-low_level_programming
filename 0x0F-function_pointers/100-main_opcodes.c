@@ -1,14 +1,14 @@
 #include <stdio.h>
-	#include <stdlib.h>
+#include <stdlib.h>
 
 
-	/**
-	 * main - outputs opscode
-	 * @argc: array count
-	 * @argv: arrays input from std in
-	 *
-	 * Return: Always 0 (Success)
-	 */
+/**
+ * main - outputs opscode
+ * @argc: array count
+ * @argv: arrays input from std in
+ *
+ * Return: Always 0 (Success)
+ */
 	int main(int argc, char *argv[])
 	{
 		int bytes, k;
