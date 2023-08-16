@@ -11,27 +11,27 @@ int op_mod(int a, int b);
  * @a: The first number.
  * @b: The second number.
  *
- * Return: The sum of a and b.
+ * Return: Result of addition
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
 /**
- * op_sub - Returns the difference of two numbers.
- * @a: The first number.
- * @b: The second number.
+ * op_sub - fxn for doing subtraction
+ * @a:  var 1.
+ * @b:  var 2.
  *
- * Return: The difference of a and b.
+ * Return: Result.
  */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
 /**
- * op_mul - Returns the product of two numbers.
- * @a: The first number.
- * @b: The second number.
+ * op_mul - fxn to multiply 2 nums.
+ * @a:  var 1.
+ * @b: .var 2
  *
  * Return: The product of a and b.
  */
@@ -40,22 +40,22 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
- * op_div - Returns the division of two numbers.
- * @a: The first number.
- * @b: The second number.
+ * op_div - func to div.
+ * @a: var 1.
+ * @b: var2.
  *
- * Return: The quotient of a and b.
+ * Return: Results for the division
  */
 int op_div(int a, int b)
 {
 	return (a / b);
 }
 /**
- * op_mod - Returns the remainder of the division of two numbers.
- * @a: The first number.
- * @b: The second number.
+ * op_mod - func to div.
+ * @a: var 1.
+ * @b:  var 1.
  *
- * Return: The remainder of the division of a by b.
+ * Return: Results for the division.
  */
 int op_mod(int a, int b)
 {
