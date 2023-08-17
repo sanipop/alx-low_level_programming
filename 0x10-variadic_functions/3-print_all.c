@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * print_all - output selected values
- * @format: outline the data types
+ * print_all - output character to stdout
+ * @format: data type of fxn
  */
 void print_all(const char * const format, ...)
 {
-	int k = 0;
-	char *o, *q = "";
+	int i = 0;
+	char *str, *sep = "";
 
 	va_list list;
 
@@ -17,34 +17,35 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		while (format[k])
+		while (format[i])
 		{
-			switch (format[k])
+			switch (format[i])
 			{
 				case 'c':
-					printf("%s%c", q, va_arg(list, int));
+					printf("%s%c", sep, va_arg(list, int));
 					break;
-				case 'k':
-					printf("%s%d", q, va_arg(list, int));
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
 					break;
 				case 'f':
-					printf("%s%f", q, va_arg(list, double));
+					printf("%s%f", sep, va_arg(list, double));
 					break;
 				case 's':
-					o = va_arg(list, char *);
-					if (!o)
-						o = "(nil)";
-					printf("%s%s", q, o);
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
 					break;
 				default:
-					k++;
+					i++;
 					continue;
 			}
-			q = ", ";
-			k++;
+			sep = ", ";
+			i++;
 		}
 	}
 
 	printf("\n");
 	va_end(list);
 }
+

@@ -4,7 +4,7 @@
 
 /**
  * print_strings - send string to std out per line
- * @separator: string used to devide words
+ * @separator: string used to divide words
  * @n: string count .
  * @...: Arguments for variable input.
  *
@@ -15,20 +15,20 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list strings;
 	char *x;
-	unsigned int index;
+	unsigned int y;
 
 	va_start(strings, n);
 
-	for (index = 0; index < n; index++)
+	for (y = 0; y < n; y++)
 	{
 		x = va_arg(strings, char *);
 
-		if (str == NULL)
+		if (x == NULL)
 			printf("(nil)");
 		else
 			printf("%s", x);
 
-		if (index != (n - 1) && separator != NULL)
+		if (y != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 
@@ -36,3 +36,4 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_end(strings);
 }
+
