@@ -1,10 +1,8 @@
 #include "3-calc.h"
 #include <stdlib.h>
 /**
- * 
- * get_op_func - Function for selecting operation    
- * @s: Selector.
- *
+  * get_op_func - Function for selecting operation
+ * @s: Selector
  * Return: directs to the selected function .
  */
 int (*get_op_func(char *s))(int, int)
