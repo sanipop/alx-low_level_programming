@@ -17,20 +17,23 @@ return -1;
 listint_t *current = *head;
 listint_t *previous = NULL;
 
-for (unsigned int i = 0; i < index; i++)
+if (index == 0)
 {
-if (current == NULL)
-return -1;
+*head = current->next;
+free(current);
+return 1;
+}
 
+for (unsigned int i = 0; current != NULL && i < index; i++)
+{
 previous = current;
 current = current->next;
 }
 
-if (previous == NULL)
-*head = current->next;
-else
-previous->next = current->next;
+if (current == NULL)
+return -1;
 
+previous->next = current->next;
 free(current);
 return 1;
 }
