@@ -10,46 +10,34 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-    listint_t *slow = *h, *fast = *h;
-    size_t count = 0;
+	size_t y = 0;
+	int x;
+	listint_t *p;
 
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
+	if (!h || !*h)
+		return (0);
 
-        if (slow == fast) // Loop detected
-        {
-            while (*h != slow)
-            {
-                listint_t *temp = *h;
-                *h = (*h)->next;
-                free(temp);
-                count++;
-            }
+	while (*h)
+	{
+		x = *h - (*h)->next;
+		if (x > 0)
+		{
+			p = (*h)->next;
+			free(*h);
+			*h = p;
+			y++;
+		}
+		else
+		{
+			free(*h);
+			*h = NULL;
+			y++;
+			break;
+		}
+	}
 
-            *h = NULL;
-            while (slow->next != *h)
-            {
-                listint_t *temp = slow;
-                slow = slow->next;
-                free(temp);
-                count++;
-            }
+	*h = NULL;
 
-            free(*h);
-            count++;
-            return count;
-        }
-    }
-
-    while (*h != NULL)
-    {
-listint_t *temp = *h;
-*h = (*h)->next;
-free(temp);
-count++;
+	return (y);
 }
 
-return count;
-}

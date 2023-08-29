@@ -8,28 +8,28 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-    if (head == NULL || head->next == NULL)
-        return NULL;
+	listint_t *slow = head;
+	listint_t *fast = head;
 
-    listint_t *slow = head, *fast = head;
+	if (!head)
+		return (NULL);
 
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
+	while (slow && fast && fast->next)
+	{
+		fast = fast->next->next;
+		slow = slow->next;
+		if (fast == slow)
+		{
+			slow = head;
+			while (slow != fast)
+			{
+				slow = slow->next;
+				fast = fast->next;
+			}
+			return (fast);
+		}
+	}
 
-        if (slow == fast) // Loop detected
-        {
-            slow = head;
-            while (slow != fast)
-            {
-                slow = slow->next;
-                fast = fast->next;
-            }
-            return slow; // Return the starting node of the loop
-        }
-    }
-
-    return NULL; // No loop found
+	return (NULL);
 }
 
