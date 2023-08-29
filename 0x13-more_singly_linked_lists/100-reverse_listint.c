@@ -13,13 +13,13 @@ listint_t *next;
 
 while (*head != NULL)
 {
-next = (*head)->next; 
+next = (*head)->next;
 (*head)->next = prev;
 
-prev = *head; 
+prev = *head;
 *head = next;
 }
 
 *head = prev;
-return *head;
+return (*head);
 }
