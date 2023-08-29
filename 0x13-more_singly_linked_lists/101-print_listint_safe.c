@@ -11,7 +11,7 @@ size_t print_listint_safe(const listint_t *head)
  *
  * Return: The number of nodes in the list.
  */
-size_t print_listint_safe(const listint_t *head)
+size_t looped_listint_len(const listint_t *head)
 {
 const listint_t *x, *y;
 	size_t nodes = 1;
