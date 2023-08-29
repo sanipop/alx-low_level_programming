@@ -10,36 +10,76 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-const listint_t *slow = head, *fast = head;
-size_t count = 0, loop_detected = 0;
+istint_t *x, *y;
+	size_t nodes = 1;
 
-while (fast != NULL && fast->next != NULL)
-{
-printf("[%p] %d\n", (void *)slow, slow->n);
-slow = slow->next;
-fast = fast->next->next;
+	if (head == NULL || head->next == NULL)
+		return (0);
 
-if (slow == fast)
-{
-loop_detected = 1;
-break;
+	x = head->next;
+	hare = (head->next)->next;
+
+	while (y)
+	{
+		if (x == y)
+		{
+			x = head;
+			while (x != y)
+			{
+				nodes++;
+				x = x->next;
+				y = y->next;
+			}
+
+			x = x->next;
+			while (x != y)
+			{
+				nodes++;
+				x = x->next;
+			}
+
+			return (nodes);
+		}
+
+		x = x->next;
+		hare = (hare->next)->next;
+	}
+
+	return (0);
 }
-count++;
-}
 
-if (loop_detected)
+/**
+ * print_listint_safe -a save print for list.
+ * @head: a pointer var.
+ *
+ * Return: the fxn return var.
+ */
+size_t print_listint_safe(const listint_t *head)
 {
-printf("-> [%p] %d\n", (void *)slow, slow->n);
-exit(98);
-}
+	size_t nodes, index = 0;
 
-if (fast != NULL)
-{
-printf("[%p] %d\n", (void *)slow, slow->n);
-slow = slow->next;
-count++;
-}
+	nodes = looped_listint_len(head);
 
-return count;
+	if (nodes == 0)
+	{
+		for (; head != NULL; nodes++)
+		{
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
+		}
+	}
+
+	else
+	{
+		for (index = 0; index < nodes; index++)
+		{
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
+		}
+
+		printf("-> [%p] %d\n", (void *)head, head->n);
+	}
+
+	return (nodes);
 }
 
