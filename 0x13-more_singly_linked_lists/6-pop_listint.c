@@ -9,14 +9,16 @@
  * Return: The data (n) of the deleted head node, or 0 if the list is empty.
  */
 int pop_listint(listint_t **head)
-{
-    if (*head == NULL)
-        return 0;
-    listint_t *current = *head;
-    int data = current->n;
+	listint_t *y;
+	int x;
 
-    *head = (*head)->next;
-free(current);
+	if (!head || !*head)
+		return (0);
 
-return data;
+	x = (*head)->n;
+	y = (*head)->next;
+	free(*head);
+	*head = y;
+
+	return (x);
 }

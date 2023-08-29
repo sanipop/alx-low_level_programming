@@ -10,16 +10,14 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-unsigned int count = 0;
+	unsigned int a = 0;
+	listint_t *temp = head;
 
-while (head != NULL)
-{
-if (count == index)
-return head;
+	while (temp && i < index)
+	{
+		temp = temp->next;
+		a++;
+	}
 
-head = head->next;
-count++;
-}
-
-return NULL; // Node does not exist at the given index
+	return (temp ? temp : NULL);
 }
