@@ -1,6 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+
+size_t looped_listint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head)
+
 
 /**
  * print_listint_safe - Prints a listint_t linked list.
@@ -10,14 +13,14 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-istint_t *x, *y;
+const listint_t *x, *y;
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
 
 	x = head->next;
-	hare = (head->next)->next;
+	y = (head->next)->next;
 
 	while (y)
 	{
@@ -42,7 +45,7 @@ istint_t *x, *y;
 		}
 
 		x = x->next;
-		hare = (hare->next)->next;
+		y = (y->next)->next;
 	}
 
 	return (0);
