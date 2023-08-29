@@ -10,9 +10,9 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t y = 0;
+size_t s = 0;
 	int x;
-	listint_t *p;
+	listint_t *o;
 
 	if (!h || !*h)
 		return (0);
@@ -22,22 +22,22 @@ size_t free_listint_safe(listint_t **h)
 		x = *h - (*h)->next;
 		if (x > 0)
 		{
-			p = (*h)->next;
+			o = (*h)->next;
 			free(*h);
-			*h = p;
-			y++;
+			*h = o;
+			s++;
 		}
 		else
 		{
 			free(*h);
 			*h = NULL;
-			y++;
+			s++;
 			break;
 		}
 	}
 
 	*h = NULL;
 
-	return (y);
+return (s);
 }
 
