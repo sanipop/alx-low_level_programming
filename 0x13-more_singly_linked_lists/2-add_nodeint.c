@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lists.h" // Include the header file "lists.h" which should contain the listint_t struct definition
+#include "lists.h"
 
 /**
  * add_nodeint - Adds a new node at the beginning of a listint_t list.
@@ -11,16 +9,15 @@
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *x;
+	listint_t *new;
 
-	x = malloc(sizeof(listint_t));
-	if (!x)
+	new = malloc(sizeof(listint_t));
+	if (!new)
 		return (NULL);
 
-	x->n = n;
-	x->next = *head;
-	*head = x;
+	new->n = n;
+	new->next = *head;
+	*head = new;
 
-	return (x);
+	return (new);
 }
-

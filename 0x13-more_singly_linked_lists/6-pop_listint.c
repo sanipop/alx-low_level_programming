@@ -9,6 +9,7 @@
  * Return: The data (n) of the deleted head node, or 0 if the list is empty.
  */
 int pop_listint(listint_t **head)
+{
 	listint_t *y;
 	int x;
 
