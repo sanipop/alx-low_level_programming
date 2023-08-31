@@ -6,7 +6,7 @@
  *
  * Return: The size of the list that was freed.
  */
-size_t free_listint_safe(listint_t **h)
+size_tfree_listint_safe(listint_t **h)
 {
 	size_t s = 0;
 	int x;
