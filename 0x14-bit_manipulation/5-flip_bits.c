@@ -10,14 +10,14 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
- int X, Y = 0;
+	int X, Y = 0;
 	unsigned long int Z
 	unsigned long int A = n ^ m;
 
 	for (X = 63; X >= 0; X--)
 	{
 		Z = A >> X;
-		if (current & 1)
+		if (Z & 1)
 			Y++;
 	}
 
