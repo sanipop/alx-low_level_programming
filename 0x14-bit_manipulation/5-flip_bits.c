@@ -1,25 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * flip_bits - Counts the number of bits needed to flip to get from n to m.
- * @n: The source number.
- * @m: The target number.
+ * flip_bits - the numbers to flip
+ * @n: Input 1
+ * @m: Input 2
  *
- * Return: The number of bits to be flipped.
+ * Return: conunt of bits to flip
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int X, Y = 0;
-	unsigned long int Z;
-	unsigned long int A = n ^ m;
+	int b, j = 0;
+	unsigned long int x;
+	unsigned long int y = n ^ m;
 
-	for (X = 63; X >= 0; X--)
+	for (b = 63; b >= 0; b--)
 	{
-		Z = A >> X;
-		if (Z & 1)
-			Y++;
+		x = y >> b;
+		if (x & 1)
+			j++;
 	}
 
-	return (Y);
+	return (j);
 }

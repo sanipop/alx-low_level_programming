@@ -1,20 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * get_bit - Returns the value of a bit at a given index.
- * @n: The number from which to extract the bit.
- * @index: The index of the bit to be extracted.
+ * get_bit - returns the value of a bit at an index in a decimal number
+ * @n: number to find its index
+ * @index: bit location
  *
- * Return: The value of the bit at index index, or -1 if an error occurred.
+ * Return: output of bit
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int binary;
+	int bit_output;
 
 	if (index > 63)
 		return (-1);
 
-	binary = (n >> index) & 1;
+	bit_output = (n >> index) & 1;
 
-	return (binary);
+	return (bit_output);
 }
