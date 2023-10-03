@@ -1,12 +1,13 @@
 #include "main.h"
 /**
- * create_file – To Create a File.
- * @filename: Name to reference the file in the program.
- * @text_content: Buffer of characters
+ * create_file - Creates a file fo the Program.
+ * @filename: String of the file to be edited.
+ * @text_content: the string that will be writen to the txt file.
  *
- * Return: With Failure return- -1.
- *  And Otherwise - 1.
+ * Return: If the function fails - -1.
+ *         Otherwise - 1.
  */
+
 int create_file(const char *filename, char *text_content)
 {
 	int filed, w, leng = 0;
