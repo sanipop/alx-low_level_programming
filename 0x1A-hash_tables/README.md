@@ -1,1 +1,1 @@
-this is a c project in hash tables
+This is a hash Map project in C Programming 
