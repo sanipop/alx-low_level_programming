@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - it convert the string to hash 
+ * hash_djb2 - it convert the string to hash
  * @str: the input string
  *
  * Return: the converted hash
